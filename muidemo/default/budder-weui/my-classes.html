@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>星云家门口</title>
+    <!-- WeUI -->
+    <link rel="stylesheet" href="./css/weui.min.css">
+    <!-- jQuery-WeUI-->
+    <link rel="stylesheet" href="./css/jquery-weui.min.css">
+    <!-- Budder -->
+    <link rel="stylesheet" href="./css/budder.css">
+</head>
+
+<body ontouchstart>
+    <div class="budder-header">
+        我的课程
+    </div>
+    <div class="weui_tab">
+        <div class="weui_navbar">
+            <div class="weui_navbar_item weui_bar_item_on">
+                课程表
+            </div>
+            <div class="weui_navbar_item" onclick="javascript:location.href='progress.html'">
+                课程进度
+            </div>
+      </div>
+        <div class="weui_tab_bd">
+            <div class="weui_cells weui_cells_form">
+              <div class="weui_cell">
+                <div class="weui_cell_hd"><label for="date" class="weui_label">日期：</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                  <input class="weui_input" id="date" type="text" value="">
+                </div>
+              </div>
+            </div>
+            <div class="weui_panel weui_panel_access">
+                <div class="weui_panel_bd">
+                    <a class="weui_media_box weui_media_appmsg">
+                        <div class="weui_media_hd">
+                            <img class="weui_media_appmsg_thumb" src="./images/icon_nav_msg.png" alt="">
+                        </div>
+                        <div class="weui_media_bd">
+                            <h4 class="weui_media_title">演讲初级</h4>
+                            <p class="weui_media_desc">小象口才</p>
+                        </div>
+                        <span style="color: #04BE02">10:00</span>
+                    </a>
+                    <a href="" class="weui_media_box weui_media_appmsg">
+                        <div class="weui_media_hd">
+                            <img class="weui_media_appmsg_thumb" src="./images/icon_nav_msg.png" alt="">
+                        </div>
+                        <div class="weui_media_bd">
+                            <h4 class="weui_media_title">试听课初级班</h4>
+                            <p class="weui_media_desc">木格美术</p>
+                        </div>
+                        <span style="color: #04BE02">14:00</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- jQuery -->
+        <script src="./js/jquery.min.js"></script>
+        <!-- jQuery-WeUI -->
+        <script src="./js/jquery-weui.min.js"></script>
+        <script>
+          var today = fomateDate(new Date(), "YYYY-MM-DD");
+          $("#date").calendar({
+            value: [today],
+          });
+          document.getElementById("date").value = today;
+
+          function fomateDate(oDate, sFomate) {
+            sFomate = sFomate.replace("YYYY", oDate.getFullYear());
+            sFomate = sFomate.replace("YY", String(oDate.getFullYear()).substr(2))
+            if (oDate.getMonth() < 9) {
+                sFomate = sFomate.replace("MM", "0" + (oDate.getMonth()+1));
+            } else {
+                sFomate = sFomate.replace("MM", (oDate.getMonth()+1));
+            }
+            if (oDate.getDate() < 9) {
+                sFomate = sFomate.replace("DD", "0" + oDate.getDate());
+            } else {
+                sFomate = sFomate.replace("DD", oDate.getDate());
+            }
+            sFomate = sFomate.replace("hh", oDate.getHours());
+            sFomate = sFomate.replace("mm", oDate.getMinutes());
+            sFomate = sFomate.replace("ss", oDate.getSeconds());
+
+            return sFomate;
+        }
+    </script>
+</body>
+
+</html>

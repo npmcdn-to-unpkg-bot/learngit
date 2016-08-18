@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>星云家门口</title>
+    <!-- WeUI -->
+    <link rel="stylesheet" href="./css/weui.min.css">
+    <!-- jQuery-WeUI-->
+    <link rel="stylesheet" href="./css/jquery-weui.min.css">
+    <!-- Budder -->
+    <link rel="stylesheet" href="./css/budder.css">
+    <style>
+    .swiper-container {
+        width: 100%;
+    }
+    
+    .swiper-container img {
+        display: block;
+        width: 100%;
+    }
+
+    .weui_icon_search:before {
+        padding-right: 10px;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    </style>
+</head>
+
+<body ontouchstart>
+    <div class="weui_tab">
+        <div class="weui_tab_bd">
+            <div class="budder-header">
+                <div class="weui-row">
+                  <div class="weui-col-33"></div>
+                  <div class="weui-col-33">首页</div>
+                  <div class="weui-col-33" style="text-align: right;">
+                    <a href="search.html">
+                        <i class="weui_icon_search"></i>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="./images/swiper-1.jpg" /></div>
+                    <div class="swiper-slide"><img src="./images/swiper-2.jpg" /></div>
+                    <div class="swiper-slide"><img src="./images/swiper-3.jpg" /></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="weui_panel weui_panel_access">
+                <div class="weui_panel_hd">教师点评</div>
+                <div class="weui_panel_bd">
+                    <a href="" class="weui_media_box weui_media_appmsg">
+                        <div class="weui_media_hd">
+                            <img class="weui_media_appmsg_thumb" src="./images/icon_nav_msg.png" alt="">
+                        </div>
+                        <div class="weui_media_bd">
+                            <h4 class="weui_media_title">吴老师 | 木格美术</h4>
+                            <p class="weui_media_desc">多多这节课表现非常好</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="weui_panel weui_panel_access">
+                <div class="weui_panel_hd">家门口</div>
+                <div class="weui_panel_bd">
+                    <a href="store.html" class="weui_media_box weui_media_appmsg">
+                        <div class="weui_media_hd">
+                            <img class="weui_media_appmsg_thumb" src="./images/icon_nav_msg.png" alt="">
+                        </div>
+                        <div class="weui_media_bd">
+                            <h4 class="weui_media_title">新榆公馆店</h4>
+                            <p class="weui_media_desc">浑南新区晋阳街88号</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="weui_panel">
+                <div class="weui_panel_hd">今日课程</div>
+                <div class="weui_panel_bd">
+                    <div class="weui_media_box weui_media_small_appmsg">
+                        <div class="weui_cells weui_cells_access">
+                            <a class="weui_cell" href="javascript:;">
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <p>试听课初级班</p>
+                                </div>
+                            </a>
+                            <a class="weui_cell" href="javascript:;">
+                                <div class="weui_cell_hd"><img src="./images/icon_nav_icons.png" alt="" style="width:20px;margin-right:10px;display:block"></div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <p class="weui_media_desc">2016-04-30 14:00~15:00</p>
+                                </div>
+                            </a>
+                            <a class="weui_cell" href="javascript:;">
+                                <div class="weui_cell_hd"><img src="./images/icon_nav_city.png" alt="" style="width:20px;margin-right:10px;display:block"></div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <p class="weui_media_desc">新榆公馆店</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui_tabbar">
+            <a class="weui_tabbar_item weui_bar_item_on">
+                <div class="weui_tabbar_icon">
+                    <img src="./images/icon_nav_button.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">首页</p>
+            </a>
+            <a href="store-index.html" class="weui_tabbar_item">
+                <div class="weui_tabbar_icon">
+                    <img src="./images/icon_nav_msg.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">家门口</p>
+            </a>
+            <a href="me.html" class="weui_tabbar_item">
+                <div class="weui_tabbar_icon">
+                    <img src="./images/icon_nav_cell.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">我的</p>
+            </a>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- jQuery-WeUI -->
+    <script src="./js/jquery-weui.min.js"></script>
+    <!-- Swiper -->
+    <script src="./js/swiper.min.js"></script>
+    <script>
+    $(".swiper-container").swiper({
+        loop: true,
+        autoplay: 3000
+    });
+    </script>
+</body>
+
+</html>
